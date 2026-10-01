@@ -16,21 +16,27 @@ export default function Courses() {
   const [active, setActive] = useState('Featured');
 
   return (
-    <section className="bg-white py-16 px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Discover Your Passion,<br />Build Your Skills</h2>
-          <p className="text-gray-600 text-base md:text-lg mx-auto py-6 max-w-7xl">
-            At Bytespace Courses, we bring you life-changing knowledge. Explore a variety of courses across different <br /> fields, from technology to the arts, and discover your passion on your course journey.
+    <section className="bg-white px-4 py-12 sm:px-6 md:px-8 md:py-16 lg:px-32">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="mb-8 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl md:text-5xl">
+            Discover Your Passion,
+            <br className="hidden sm:block" />
+            Build Your Skills
+          </h2>
+          <p className="mx-auto max-w-6xl text-sm text-gray-600 sm:text-base md:text-lg">
+            At Bytespace Courses, we bring you life-changing knowledge. Explore a variety of courses across different
+            <br className="hidden md:block" />
+            fields, from technology to the arts, and discover your passion on your course journey.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-8 justify-center">
+        <div className="mb-8 flex flex-wrap justify-center gap-2">
           {categories.map((cat, index) => {
             const isActive = active === cat;
             const isFeatured = index === 0;
 
-            let buttonClasses = 'px-3 py-1.5 rounded-full text-base border transition-colors';
+            let buttonClasses = 'px-3 py-1.5 rounded-full text-sm sm:text-base border transition-colors';
 
             if (isActive) {
               buttonClasses += isFeatured
@@ -50,14 +56,16 @@ export default function Courses() {
               </button>
             );
           })}
-          <button className="px-3 py-1.5 rounded-full text-base font-thin border border-gray-200 text-gray-600 hover:bg-[#d4fb20] hover:text-gray-900 hover:border-[#d4fb20] transition-colors">
+          <button className="rounded-full border border-gray-200 px-3 py-1.5 text-sm font-thin text-gray-600 transition-colors hover:border-[#d4fb20] hover:bg-[#d4fb20] hover:text-gray-900 sm:text-base">
             + More
           </button>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {courses.map((course) => (
-            <CourseCard key={course.image} course={course} />
+            <div key={course.image} className="mx-auto w-full max-w-[360px] sm:max-w-none">
+              <CourseCard course={course} />
+            </div>
           ))}
         </div>
       </div>

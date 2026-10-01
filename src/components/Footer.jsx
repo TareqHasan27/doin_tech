@@ -1,34 +1,35 @@
 export default function Footer() {
   return (
-    <footer className="bg-white py-16 px-6 md:px-12 lg:px-20">
-      <div className="mx-auto max-w-7xl">
+    <footer className="bg-white px-4 py-12 sm:px-6 md:px-12 md:py-16 lg:px-32">
+      <div className="mx-auto max-w-[1600px]">
         {/* ===== Top Section ===== */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
           {/* ===== Left: Logo + Newsletter ===== */}
           <div className="md:col-span-5">
             {/* Logo */}
-            <div className="mb-5">
+            <div className="mb-5 flex items-center gap-3">
               <img
-                src="/logo_footer"
+                src="/footer_logo.png"
                 alt="ByteSpace"
                 className="h-8 w-auto object-contain"
               />
+              <h2 className="text-2xl font-bold text-black">ByteSpace</h2>
             </div>
 
             {/* Newsletter text */}
-            <p className="text-[14px] text-[#3a3a3a] mb-6 max-w-md font-light leading-relaxed">
+            <p className="mb-6 max-w-md text-[14px] font-light leading-relaxed text-[#3a3a3a]">
               Stay Up to date with our latest features and releases by joining our newsletter.
             </p>
 
             {/* Email input + Search button */}
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex items-center gap-3 mb-6 max-w-md"
+              className="mb-6 flex max-w-md flex-col gap-3 sm:flex-row sm:items-center"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 rounded-full border border-[#dcdce2] bg-white px-6 py-3.5 text-[14px] text-[#3a3a3a] placeholder-[#8a8a92] outline-none focus:border-[#c8ff00] transition-colors"
+                className="w-full flex-1 rounded-full border border-[#dcdce2] bg-white px-6 py-3.5 text-[14px] text-[#3a3a3a] placeholder-[#8a8a92] outline-none transition-colors focus:border-[#c8ff00]"
               />
               <button
                 type="submit"
@@ -39,7 +40,7 @@ export default function Footer() {
             </form>
 
             {/* Privacy text */}
-            <p className="text-[13px] leading-relaxed text-[#6b6b73] max-w-md font-light">
+            <p className="max-w-md text-[13px] font-light leading-relaxed text-[#6b6b73]">
               By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
             </p>
           </div>
@@ -58,7 +59,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="text-[15px] font-light text-[#1a1a1a] hover:text-[#2b59ff] transition-colors"
+                  className="text-[15px] font-light text-[#1a1a1a] transition-colors hover:text-[#2b59ff]"
                 >
                   {link}
                 </a>
@@ -75,7 +76,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="text-[15px] font-light text-[#1a1a1a] hover:text-[#2b59ff] transition-colors"
+                  className="text-[15px] font-light text-[#1a1a1a] transition-colors hover:text-[#2b59ff]"
                 >
                   {link}
                 </a>
@@ -92,7 +93,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="text-[15px] font-light text-[#1a1a1a] hover:text-[#2b59ff] transition-colors"
+                  className="text-[15px] font-light text-[#1a1a1a] transition-colors hover:text-[#2b59ff]"
                 >
                   {link}
                 </a>
@@ -102,16 +103,16 @@ export default function Footer() {
         </div>
 
         {/* ===== Bottom Bar ===== */}
-        <div className="mt-20 border-t border-[#e6e6ec] pt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-[#e6e6ec] pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[14px] font-light text-[#3a3a3a]">
             © 2023 ByteSpace. All rights reserved.
           </p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap gap-4 sm:gap-8">
             {['Privacy Policy', 'Terms of Service', 'Cookies Settings'].map((item, i) => (
               <a
                 key={i}
                 href="#"
-                className="text-[14px] font-light text-[#3a3a3a] hover:text-[#2b59ff] transition-colors"
+                className="text-[14px] font-light text-[#3a3a3a] transition-colors hover:text-[#2b59ff]"
               >
                 {item}
               </a>

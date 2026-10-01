@@ -1,24 +1,24 @@
 export default function ProGrowth() {
   return (
     <section
-      className="pb-16 pt-32 px-8 relative overflow-hidden h-[1460px]"
+      className="relative overflow-hidden px-4 pb-12 pt-20 sm:px-6 md:px-8 md:pb-16 md:pt-32 lg:px-32"
       style={{
         backgroundImage: 'url(/pro_bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col gap-24">
+      <div className="relative z-10 mx-auto flex max-w-[1600px] flex-col gap-10 md:gap-24">
         {/* ===== Row 1: Text Left, Image Right ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center pt-10">
+        <div className="grid grid-cols-1 gap-8 items-center pt-0 md:grid-cols-2 md:pt-10">
           {/* Left: Text */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#1a1a1a] mb-6">
+          <div className="text-center md:text-left">
+            <h2 className="mb-6 text-3xl font-bold leading-tight text-[#1a1a1a] sm:text-4xl md:text-5xl">
               Your Path to Professional
-              <br />
+              <br className="hidden md:block" />
               Growth Starts Here!
             </h2>
-            <p className="text-[#4a4a4a] text-[15px] leading-relaxed mb-10 max-w-lg">
+            <p className="mx-auto max-w-lg text-sm leading-relaxed text-[#4a4a4a] md:mx-0 md:text-[15px]">
               Explore our curated selection of courses tailored to enhance
               your capabilities and accelerate your career journey.
               Whether you are looking to sharpen specific skills, gain
@@ -26,57 +26,57 @@ export default function ProGrowth() {
               we have the resources you need.
             </p>
 
-            <div className="flex gap-14">
+            <div className="mt-8 flex flex-wrap justify-center gap-8 md:justify-start">
               <div>
                 <div className="text-3xl font-bold text-[#2b59ff]">12K</div>
-                <div className="text-sm text-[#5a5a5a] mt-1">Students</div>
+                <div className="mt-1 text-sm text-[#5a5a5a]">Students</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#2b59ff]">70+</div>
-                <div className="text-sm text-[#5a5a5a] mt-1">Courses</div>
+                <div className="mt-1 text-sm text-[#5a5a5a]">Courses</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-[#2b59ff]">16</div>
-                <div className="text-sm text-[#5a5a5a] mt-1">Creators</div>
+                <div className="mt-1 text-sm text-[#5a5a5a]">Creators</div>
               </div>
             </div>
           </div>
 
           {/* Right: Image (top-right) */}
-          <div className="relative flex justify-center md:justify-end w-[621px]">
+          <div className="relative flex justify-center md:justify-end">
             <img
               src="/pro_right.png"
               alt="Professional Growth"
-              className="w-full max-w-md object-contain"
+              className="w-full max-w-[480px] object-contain md:max-w-md"
             />
           </div>
         </div>
 
         {/* ===== Row 2: Image Left, Text Right ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
           {/* Left: Image (bottom-left) */}
-          <div className="relative flex justify-center md:justify-start w-[548px]">
+          <div className="relative flex justify-center md:justify-start">
             <img
               src="/pro_left.png"
               alt="Course Creation"
-              className="w-full max-w-md object-contain"
+              className="w-full max-w-[420px] object-contain md:max-w-md"
             />
           </div>
 
           {/* Right: Text + Checklist */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#1a1a1a] mb-6">
+          <div className="text-center md:text-left">
+            <h2 className="mb-6 text-3xl font-bold leading-tight text-[#1a1a1a] sm:text-4xl md:text-5xl">
               Create &amp; Manage
-              <br />
+              <br className="hidden md:block" />
               Courses Easily.
             </h2>
-            <p className="text-[#4a4a4a] text-[15px] leading-relaxed mb-8 max-w-lg">
+            <p className="mx-auto max-w-lg text-sm leading-relaxed text-[#4a4a4a] md:mx-0 md:text-[15px]">
               <span className="font-bold text-[#1a1a1a]">ByteSpace</span>{' '}
               supports individuals or entities in the creation, publication,
               and administration of educational courses.
             </p>
 
-            <ul className="space-y-4">
+            <ul className="mt-8 space-y-4">
               {[
                 'Share Your Expertise',
                 'Monetize Your Passion',
@@ -84,7 +84,7 @@ export default function ProGrowth() {
                 'Build a Community',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
-                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2b59ff] text-white text-[11px] font-bold">
+                  <span className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#2b59ff] text-[11px] font-bold text-white">
                     ✓
                   </span>
                   <span className="text-[15px] font-medium text-[#1a1a1a]">
